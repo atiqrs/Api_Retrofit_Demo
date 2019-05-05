@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ApiDemo</string>
+    <string name="SignInText">SIGN IN</string>
 </resources>

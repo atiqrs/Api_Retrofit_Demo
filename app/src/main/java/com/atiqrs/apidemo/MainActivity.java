@@ -1,5 +1,6 @@
 package com.atiqrs.apidemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageView MidId;
     TextView fName,lName,Gender,username, Email, Mobile;
-    Button refresh;
+    Button refresh, gotoSignin, getGotoSignup;
 
     //Create Object Interface class
     ApiInterface apiInterface;
@@ -35,15 +36,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Email = findViewById(R.id.Email);
         Mobile = findViewById(R.id.Mobile);
         refresh = findViewById(R.id.refresh);
+        gotoSignin = findViewById(R.id.gotoSignin);
+        getGotoSignup = findViewById(R.id.gotoSignup);
+
 
         apiInterface = AppConfig.getRetrofit().create(ApiInterface.class);
         refresh.setOnClickListener(this);
+        gotoSignin.setOnClickListener(this);
+        getGotoSignup.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.refresh){
             getJsonData();
+        }
+        if (v.getId() == R.id.gotoSignin){
+            startActivity(new Intent(getApplicationContext(),SignIn.class));
+        }
+        if (v.getId() == R.id.gotoSignup){
+            startActivity(new Intent(getApplicationContext(),SignUp.class));
         }
     }
 

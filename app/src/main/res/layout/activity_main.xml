@@ -64,4 +64,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Refresh"/>
+
+    <Button
+        android:id="@+id/gotoSignin"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"/>
+
+    <Button
+        android:id="@+id/gotoSignup"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"/>
 </LinearLayout>
