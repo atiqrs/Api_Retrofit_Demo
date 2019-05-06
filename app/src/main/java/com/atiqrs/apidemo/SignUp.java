@@ -49,7 +49,7 @@ public class SignUp extends AppCompatActivity {
         String mobile = Mobile.getText().toString();
 
 
-        apiInterface.postData("#API KEY#",fname,lname,mail,pass,mobile).enqueue(new Callback<RegistrationResponse>() {
+        apiInterface.postData("BD@task987",fname,lname,mail,pass,mobile).enqueue(new Callback<RegistrationResponse>() {
             @Override
             public void onResponse(Call<RegistrationResponse> call, Response<RegistrationResponse> response) {
                 Toast.makeText(SignUp.this, "Succesfull", Toast.LENGTH_SHORT).show();
